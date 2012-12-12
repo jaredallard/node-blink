@@ -1,0 +1,13 @@
+{
+  "name": "node-blink",
+  "version": "0.0.0",
+  "description": "blink(1) support for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "node-hid": "~0.1.1"
+  }
+}
