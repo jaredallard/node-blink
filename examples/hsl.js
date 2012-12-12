@@ -2,6 +2,8 @@ var blink = require('../');
 
 // get your blink(1) device
 blink(function(err, b) {
+    if (err) throw err;
+
     var angle = 0;
     setInterval(function() {
         if (++angle > 360) angle = 0;

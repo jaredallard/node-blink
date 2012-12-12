@@ -2,6 +2,8 @@ var blink = require('../');
 
 // Get your blink(1) device
 blink(function(err, b) {
+    if (err) throw err;
+
     // start with pure white
     var color = [255, 255, 255];
     // randomize colors, bounding them by 0->255
