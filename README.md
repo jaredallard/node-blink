@@ -17,3 +17,8 @@ blink(function(err, b) {
 ```
 
 Uses [node-hid](https://github.com/hanshuebner/node-hid) for most magic.
+
+## See Also
+
+* [node-blink1](https://github.com/sandeepmistry/node-blink1) beat me by 23 hours
+* [the official software for the blink1](https://github.com/todbot/blink1)
