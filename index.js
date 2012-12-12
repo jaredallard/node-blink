@@ -1,4 +1,5 @@
-var HID = require('HID');
+var HID = require('HID'),
+    parseColor = require('./lib/colorparser').parseCSSColor;
 
 var VENDOR_ID = 10168;
 
@@ -10,9 +11,24 @@ function blink(cb) {
         return (((1<<(n/32))-1) + ((1<<(n/32))*((n%32)+1)+15)/32);
     };
 
+    function parseRgb(rgb) {
+        if (typeof rgb === 'object') return rgb;
+        if (typeof rgb === 'undefined') {
+            console.log('Color value undefined');
+            return [0,0,0];
+        }
+        var c = parseColor(rgb);
+        if (!c) {
+            console.log('Could not parse color', rgb);
+            c = [0,0,0];
+        }
+        return c;
+    }
+
     function wRGB(rgb, ms) {
         var dms = ms/10;
         var msg = new Buffer(9);
+        rgb = parseRgb(rgb);
         msg[0] = 1;
         msg[1] = (ms === 0 ? 'n' : 'c').charCodeAt(0);
         msg[2] = b.blink1_degamma_log2lin(rgb[0]) | 0;
