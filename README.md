@@ -29,6 +29,15 @@ blink(function(err, b) {
     // and hsl!
     b.setRGB('hsl(35, 100%, 50%)');
 
+    // just turn it on (white)
+    b.on();
+
+    // and off (black)
+    b.off();
+
+    // get your blink(1)'s version
+    console.log(b.version());
+
     // programatically change colors with setInterval
     var angle = 0;
     setInterval(function() {
