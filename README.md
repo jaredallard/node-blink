@@ -2,6 +2,8 @@
 
 Basic nodejs bindings for [blink(1)](http://www.kickstarter.com/projects/thingm/blink1-the-usb-rgb-led).
 
+    npm install node-blink
+
 ```javascript
 var blink = require('../');
 
