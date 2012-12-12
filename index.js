@@ -9,12 +9,12 @@ function blink(cb) {
     b.blink1_degamma_log2lin = function(n) {
         return (((1<<(n/32))-1) + ((1<<(n/32))*((n%32)+1)+15)/32);
     };
-    
+
     function wRGB(rgb, ms) {
         var dms = ms/10;
         var msg = new Buffer(9);
         msg[0] = 1;
-        msg[1] = 'c'.charCodeAt(0);
+        msg[1] = (ms === 0 ? 'n' : 'c').charCodeAt(0);
         msg[2] = b.blink1_degamma_log2lin(rgb[0]) | 0;
         msg[3] = b.blink1_degamma_log2lin(rgb[1]) | 0;
         msg[4] = b.blink1_degamma_log2lin(rgb[2]) | 0;
@@ -46,7 +46,7 @@ function blink(cb) {
     }
 
     b.setRGB = function(rgb, ms) {
-        b.connection.write(wRGB(rgb, ms || 100));
+        b.connection.write(wRGB(rgb, ms || 0));
         return b;
     };
 

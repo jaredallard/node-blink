@@ -13,6 +13,8 @@ blink(function(err, b) {
     b.blink([255, 0, 0], 1000, [0, 0, 0]);
     // fade to an rgb color
     b.setRGB(color, 1000);
+    // set an rgb color instantly
+    b.setRGB(color, 1000);
 });
 ```
 
