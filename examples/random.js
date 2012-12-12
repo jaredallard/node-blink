@@ -19,6 +19,6 @@ blink(function(err, b) {
     setInterval(function() {
         // randomize colors
         color = color.map(wander);
-        b.setRGB(color, 1000);
+        b.set(color, 1000);
     }, 1000);
 });

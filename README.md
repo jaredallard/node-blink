@@ -17,19 +17,19 @@ blink(function(err, b) {
     b.blink([255, 0, 0], 1000, [0, 0, 0]);
 
     // fade to an rgb color
-    b.setRGB([0, 10, 50], 1000);
+    b.set([0, 10, 50], 1000);
 
     // set an rgb color instantly
-    b.setRGB([255, 0, 100]);
+    b.set([255, 0, 100]);
 
     // even use hex colors
-    b.setRGB('#ace');
+    b.set('#ace');
 
     // named css colors
-    b.setRGB('cyan');
+    b.set('cyan');
 
     // and hsl!
-    b.setRGB('hsl(35, 100%, 50%)');
+    b.set('hsl(35, 100%, 50%)');
 
     // just turn it on (white)
     b.on();
@@ -44,7 +44,7 @@ blink(function(err, b) {
     var angle = 0;
     setInterval(function() {
         if (++angle > 360) angle = 0;
-        b.setRGB('hsl(' + angle + ', 100%, 50%)');
+        b.set('hsl(' + angle + ', 100%, 50%)');
     }, 100);
 });
 ```

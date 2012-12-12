@@ -5,7 +5,7 @@ blink(function(err, b) {
     var angle = 0;
     setInterval(function() {
         if (++angle > 360) angle = 0;
-        b.setRGB('hsl(' + angle + ', 100%, 50%)');
+        b.set('hsl(' + angle + ', 100%, 50%)');
     }, 100);
 });
 

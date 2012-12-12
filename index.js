@@ -58,14 +58,14 @@ function blink(cb) {
 
     // set an rgb value. if ms is not given or is 0, it is set immediately -
     // otherwise it is faded two with the blink(1)'s internal functionality
-    b.setRGB = function(rgb, ms) {
+    b.set = function(rgb, ms) {
         b.connection.write(wRGB(rgb, ms || 0));
         return b;
     };
 
     // simple on & off shortcuts
-    b.on = function() { b.setRGB(white); };
-    b.off = function() { b.setRGB(black); };
+    b.on = function() { b.set(white); };
+    b.off = function() { b.set(black); };
 
     // get the blink's version number. mine is 100. this bit of code
     // is very directly inspired by node-blink1
