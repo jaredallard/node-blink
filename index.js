@@ -75,8 +75,7 @@ function blink(cb) {
 
     var err = setup(b);
 
-    if (err) return cb(err);
-    else return cb(null, b);
+    return cb(err, b);
 }
 
 module.exports = blink;
