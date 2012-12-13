@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var darksky = require('darksky'),
     blink = require('node-blink');
 
