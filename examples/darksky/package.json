@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "BSD",
-  "description": "ERROR: No README.md file found!",
+  "description": "use a blink(1) device with darksky to give ambient weather predictions",
   "dependencies": {
     "darksky": "~0.1.2",
     "node-blink": "0.0.2"
