@@ -52,6 +52,15 @@ blink(function(err, b) {
 * Uses [node-hid](https://github.com/hanshuebner/node-hid) for most magic.
 * Includes deanm's wonderful [css-color-parser-js](https://github.com/deanm/css-color-parser-js) for CSS color support
 
+## Uses
+
+See [blink-reporter](https://github.com/tmcw/blink-reporter), a [mocha](https://github.com/visionmedia/mocha)
+test reporter for the blink(1).
+
+Check out the examples in `examples/`.
+
+One of them is pretty advanced: try `npm install -g darksky` and use a
+[darksky api key](https://developer.darkskyapp.com/) to do weather forecasts.
 
 ## See Also
 
