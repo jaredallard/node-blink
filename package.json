@@ -1,6 +1,6 @@
 {
   "name": "node-blink",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "blink(1) support for node",
   "main": "index.js",
   "scripts": {
